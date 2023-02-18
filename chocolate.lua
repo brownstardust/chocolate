@@ -67,13 +67,13 @@ end
 -- This section is for event-based functions.
 -- We'll call these the "efficiency" functions.
 
-function input(state, key, fn)
-   local cases = {
-      ["pressed"] = function()
-
+-- This one is to be executed within love.keypressed().
+function inputPressed(keypress, fn, switcher) -- used like chocolate.input("w", function() print("success") end, [any switcher variable here, like ])
+   if love.keyboard.isDown(key) then
+      if not iscallable(fn) then
+         error("Chocolate: function is not callable")
+      elseif iscallable(fn) then
+         fn()
       end
-      ["released"] = function()
-
-      end
-   }
+   end
 end
