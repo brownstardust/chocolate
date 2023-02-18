@@ -34,18 +34,13 @@ POSSIBILITY OF SUCH DAMAGE.
 local love = require("love");
 assert(love._version >= "11.0", "The Chocolate library requires at least LÖVE 11.0.");
 
--- YOLO (You Only Live Once) function
--- executes it once and that's it
--- useful in stuff like love.update()
--- and love.draw() where media needs
--- to be stopped/started after action
-
-function video(vid, name, yolo)
+-- These YOLO (You Only Live Once) functions execute once and that's it.
+function video(mode, vid, name, yolo)
    if yolo then
       if mode == "load" then
          name = love.graphics.newVideo(vid);
          yolo = false;
-         return name;
+         return name; yolo;
       else if mode == "play" then
          vid:play();
          yolo = false;
@@ -61,8 +56,24 @@ function loadAudio(mode, music, name, type, loop, yolo)
    
 end
 
+function graphics(mode, img, name, yolo)
+
+end
+
 function buildUi(tabs)
 
 end
 
-function
+-- This section is for event-based functions.
+-- We'll call these the "efficiency" functions.
+
+function input(state, key, fn)
+   local cases = {
+      ["pressed"] = function()
+
+      end
+      ["released"] = function()
+
+      end
+   }
+end

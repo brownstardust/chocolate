@@ -1,7 +1,7 @@
 # chocolate
- ### THIS IS STILL A VERY EARLY WORK IN PROGRESS.
+ ### THIS IS STILL A VERY EARLY WORK IN PROGRESS. IT IS CURRENTLY BEING TESTED IN LÖVE 11.4, SO OUTDATED VERSIONS MAY BREAK. EXPECT EMPTY OR UNFINISHED FUNCTIONS DURING INITIAL DEVELOPMENT.
  
- You know the things a lady likes to receive in Valentine's Day? That's right. It's flowers, love (well, LÖVE in this case for us LOVE2D developers) and sizeable boxes of __**chocolates.**__ They're sweet, and usually cheap (depends on what chocolate you bought for your girl. ~~I am not responsible for your bankruptcy should you have chosen to buy expensive chocolate.~~)
+ You know the things a lady likes to receive in Valentine's Day? That's right. It's flowers, love (well, LÖVE in this case for us LOVE2D developers) and sizeable boxes of __**chocolates.**__ They're sweet, and usually cheap (depends on what chocolate you bought for your girl. ~~I am not responsible for your bankruptcy should you have chosen to buy expensive chocolate. That's on you.~~)
 
  This is the philosophy of the Chocolate library: to equip fellow LÖVE developers with easier tools to use for more compact code.
  
