@@ -1,11 +1,11 @@
 # chocolate
- You know the things a lady likes to receive in Valentine's Day? That's right. It's flowers, love (well, LÖVE in this case for us LOVE2D developers) and sizeable boxes of __**chocolates.**__ They're sweet, and usually cheap (depends on what chocolate you bought for your girl.)
+ You know the things a lady likes to receive in Valentine's Day? That's right. It's flowers, love (well, LÖVE in this case for us LOVE2D developers) and sizeable boxes of __**chocolates.**__ They're sweet, and usually cheap (depends on what chocolate you bought for your girl. ~~I am not responsible for your bankruptcy should you have chosen to buy expensive chocolate.~~)
 
- This is the philosophy of the Chocolate library: to equip fellow LÖVE developers with easier tools to use for more compact code. All you need is about one to three lines to replace small chunks of code.
+ This is the philosophy of the Chocolate library: to equip fellow LÖVE developers with easier tools to use for more compact code.
  
  *This is how it works.*
 
- **DISCLAIMER:**
+ **DISCLAIMER:**\
  The semi-colons are not needed in Lua. They are just there for my sanity since I have a C/C++ background.
 
  First off, obviously, you want to load Chocolate like you load any other module for LOVE2D:
@@ -43,3 +43,9 @@
  ```
 
  It only executed once, and it's looping as it should, towards the end. ~~That function only lived once. Bad joke, I know.~~ And it used two lines: one for `love.load()`, and one for `love.draw()` (or if ever, `love.update()`)!
+
+ Without Chocolate, the code would have looked like this:
+ ```lua
+ function love.load()
+    switchOn = true;
+ ```
