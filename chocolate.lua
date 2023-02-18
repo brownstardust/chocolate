@@ -40,32 +40,15 @@ assert(love._version >= "11.0", "The Chocolate library requires at least LÖVE 1
 -- and love.draw() where media needs
 -- to be stopped/started after action
 
-function video(mode, video, switch);
-   switch = true;
-   if switch then
+function video(mode, video, name, yolo);
+   if yolo then
       if mode == "load" then
-         preload 
+         name = love.graphics.newVideo(video);
 
-         switch = false;
+         yolo = false;
    end
-   return print("YOLO video playback succeeded");
 end 
 
-function music(mode, music, name, type, play, loop, switch);
-   switch = true;
-   --[[if switch and not play then
-      name = love.audio.newSource(music, type);
-      switch = false;
-   return name
-   else if switch and play then
-      name = love.audio.newSource(music, type);
-      if loop then
-         name:setLooping(true);
-         name:play();
-         switch = false;
-      else if not loop then
-         name:play();
-         switch = false;
-   end
-   ]]--
+function music(mode, music, name, type, play, loop, yolo);
+   
 end 
