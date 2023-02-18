@@ -1,4 +1,4 @@
--- Chocolate Efficiency Library
+-- Chocolate
 --[[
 
 Copyright (c) 2023 brownstardust (Poppin Brown)
@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 -- Load love module
 local love = require("love");
-assert(love._version >= "11.0", "The Chocolate efficiency library requires at least LÖVE 11.0.");
+assert(love._version >= "11.0", "The Chocolate library requires at least LÖVE 11.0.");
 
 -- YOLO (You Only Live Once) function
 -- executes it once and that's it
@@ -40,29 +40,32 @@ assert(love._version >= "11.0", "The Chocolate efficiency library requires at le
 -- and love.draw() where media needs
 -- to be stopped/started after action
 
-function yolo.playVideo(video, switch);
+function video(mode, video, switch);
    switch = true;
    if switch then
-      video:play()
-      switch = false;
-   else then
-      return print("YOLO video playback succeeded");
+      if mode == "load" then
+         preload 
+
+         switch = false;
    end
+   return print("YOLO video playback succeeded");
 end 
 
-function yolo.loadMusic(music, type, name, play, loop, switch);
+function music(mode, music, name, type, play, loop, switch);
    switch = true;
-   if switch and not play then
-      love.audio.newSource(music, type);
+   --[[if switch and not play then
+      name = love.audio.newSource(music, type);
       switch = false;
+   return name
    else if switch and play then
-      toPlay = love.audio.newSource(music, type);
+      name = love.audio.newSource(music, type);
       if loop then
-         toPlay:setLooping(true);
-         toPlay:play();
+         name:setLooping(true);
+         name:play();
          switch = false;
       else if not loop then
-         toPlay:play();
+         name:play();
          switch = false;
    end
+   ]]--
 end 
