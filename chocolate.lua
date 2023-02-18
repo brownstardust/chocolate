@@ -49,19 +49,21 @@ function video(mode, vid, name, yolo)
 end 
 
 function playAudio(music, yolo)
-   
+   -- play audio only once
 end
 
 function loadAudio(mode, music, name, type, loop, yolo)
-   
+   -- load audio only once
 end
 
 function graphics(mode, img, name, yolo)
-
+   -- load graphics only once
 end
 
 function buildUi(tabs)
-
+   -- build table from arguments in this function
+   -- (in this case, `element, x, y, xscale, yscale...`)
+   -- then tell LÖVE to print all of them.
 end
 
 -- This section is for event-based functions.
