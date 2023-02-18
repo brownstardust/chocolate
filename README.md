@@ -1,7 +1,7 @@
 # chocolate
  You know the things a lady likes to receive in Valentine's Day? That's right. It's flowers, love (well, LÖVE in this case for us LOVE2D developers) and sizeable boxes of __**chocolates.**__ They're sweet, and usually cheap (depends on what chocolate you bought for your girl.)
 
- This is the philosophy of the Chocolate library: to equip fellow LÖVE developers with easier tools to use for more compact code. All you need is about one to two lines to replace small chunks of code.
+ This is the philosophy of the Chocolate library: to equip fellow LÖVE developers with easier tools to use for more compact code. All you need is about one to three lines to replace small chunks of code.
  
  *This is how it works.*
 
@@ -13,7 +13,7 @@
  function love.load()
     chocolate = require("chocolate");
  ```
- Notice how `local` isn't used. The only core feature of Chocolate (as of this commit) is YOLO (You Only Live Once), a way to execute certain commands (on-demand music/video load, etc) once within `love.draw()` or `love.update()`, and never again.
+ Notice how `local` isn't used. The only core feature of Chocolate (as of this commit) is YOLO (You Only Live Once), a way to execute certain commands (on-demand music/video load/play, etc) once within `love.draw()` or `love.update()`, and never again.
 
  Let's say you want to play music *during* drawing within `love.draw()` (example: Level 2 Area 2 music):
  ```lua
@@ -42,4 +42,4 @@
  end
  ```
 
- It only executed once, and it's looping as it should, towards the end. ~~That function only lived once. Bad joke, I know.~~
+ It only executed once, and it's looping as it should, towards the end. ~~That function only lived once. Bad joke, I know.~~ And it used two lines: one for `love.load()`, and one for `love.draw()` (or if ever, `love.update()`)!
