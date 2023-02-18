@@ -40,19 +40,29 @@ assert(love._version >= "11.0", "The Chocolate library requires at least LÖVE 1
 -- and love.draw() where media needs
 -- to be stopped/started after action
 
-function video(video, name, yolo);
+function video(vid, name, yolo)
    if yolo then
       if mode == "load" then
-         name = love.graphics.newVideo(video);
-
+         name = love.graphics.newVideo(vid);
          yolo = false;
+         return name;
+      else if mode == "play" then
+         vid:play();
+         yolo = false;
+      end
    end
 end 
 
-function playMusic(mode, music, name, type, loop, yolo);
+function playAudio(music, yolo)
    
 end
 
-function loadMusic(mode, music, name, type, loop, yolo);
+function loadAudio(mode, music, name, type, loop, yolo)
    
-end 
+end
+
+function buildUi(tabs)
+
+end
+
+function
